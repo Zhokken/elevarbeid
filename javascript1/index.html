@@ -231,6 +231,7 @@
 
 
     <h1>Oppgave 13</h1>
+    <p>Se console</p>
     <script>
 
         //CONSOLE STYLING
@@ -239,7 +240,7 @@
 
 
 
-         const nyEelev = {
+        const nyEelev = {
             navn: "Mathias",
             alder: 49,
             klasse: "2ITa",
@@ -259,6 +260,7 @@
 
 
     <h1>Oppgave 14</h1>
+    <p>Se console</p>
     <script>
 
         //CONSOLE STYLING
@@ -272,5 +274,100 @@
         //SER BEDRE UT I CONSOLE:
         console.log("\n\n\n\n");
     </script>
+
+    <h1>Oppgave 15</h1>
+    <!--input fieldss..-->
+    <input type="text" id="navnOpgv15" placeholder="navn"> <br>
+    <input type="text" id="alderOpgv15" placeholder="alder"> <br>
+    <input type="text" id="klasseOpgv15" placeholder="klasse"> <br>
+
+    <!--plain text med id
+    som script skal/kan bruke-->
+    <p id="elevPresentasjon"></p>
+
+    <!--buttons for å endre style fra
+    elevkort til plain text-->
+    <button onclick="opprettElev()">opprett elev</button>
+    <button onclick="byttVisning()">bytt visning</button>
+
+    <!--elevkort styling med id
+    som script skal/kan bruke -->
+    <div id="elevKort" style="display: none; border: black; border-style: dashed;
+                border-radius: 25px; border-spacing: 2px;
+                width: 250px;">
+        <div style="margin: 0, auto; text-align: center;">
+            <h1>ELEVKORT</h1>
+        </div>
+        <div style="margin: 0, auto; text-align: center;">
+            <p>Navn: <b><span id="navnOutput"></span></b></p>
+            <p>Alder: <b><span id="alderOutput"></span></b></p>
+            <p>Klasse: <b><span id="klasseOutput"></span></b></p>
+        </div>
+        <div>
+
+        </div>
+    </div>
+
+
+    <script>
+        function opprettElev(){
+            //assigne all verdiene til seinere bruk
+            const navnInput15 = document.querySelector("#navnOpgv15").value;
+            const alderInput15 = document.querySelector("#alderOpgv15").value;
+            const klasseInput15 = document.querySelector("#klasseOpgv15").value;
+            const _navnOutput = document.querySelector("#navnOutput");
+            const _alderOutput = document.querySelector("#alderOutput");
+            const _klasseOutput = document.querySelector("#klasseOutput");
+            
+            //lag ett elev object dersom du opprettElev().
+            const elevObj = {
+                navn: navnInput15,
+                alder: alderInput15,
+                klasse: klasseInput15,
+                erElev: true,
+                presenter (){
+                    return "Jeg heter " + this.navn + " og går i klassen " + this.klasse;
+                }
+            };
+
+            /*sette inn fra input til elevkort stylingen!*/
+            _navnOutput.textContent = elevObj.navn;
+            _alderOutput.textContent = elevObj.alder;
+            _klasseOutput.textContent = elevObj.klasse;
+
+            //sette inn fra input til plain text div
+            document.querySelector("#elevPresentasjon").textContent = elevObj.presenter();
+        }
+
+       
+
+
+    </script>
+    
+    <script>
+        function byttVisning(){
+            const presentasjon = document.querySelector("#elevPresentasjon");
+            const elevKort = document.querySelector("#elevKort");
+
+            if (elevKort.style.display === "none") {
+                elevKort.style.display = "block";
+                presentasjon.style.display = "none";
+            } else {
+                elevKort.style.display = "none";
+                presentasjon.style.display = "block";
+            }
+        }
+    </script>
+    
+    <style>
+        input, button{
+            padding: 5px;
+            margin: 5px;
+        }
+    </style>
+    
+
+
+
 </body>
 </html>
