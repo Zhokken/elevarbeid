@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Oppgave 1</h1>
+    <script>
+        /*  Lettere å lese i consolen*/
+        console.log("OPPGAVE 1:")
+
+        const navn ="Mathias";
+        console.log(navn);
+        console.log("\n\n\n\n");
+        
+    </script>
+    <p>Se console</p>
+    <style>
+    </style>
+
+
+    <h1>Oppgave 2</h1>
+    <script>
+        
+        /*  Lettere å lese i consolen*/
+        console.log("OPPGAVE 2:\n")
+
+        let num = 0;
+        let increase = 1;
+        console.log(num);
+        console.log(`øker med ${increase}`);
+        num += increase;
+        console.log(num);
+        console.log("\n\n\n\n");
+    </script>
+    <p>Se console</p>
+    <style>
+        body{background: beige; padding: 20px;}
+        h1, h2{font-family: 'monospace'; color: darkgreen;}
+    </style>
+
+
+    <h1>Oppgave 3</h1>
+    <script>
+        console.log("OPPGAVE 3: \n");
+        /*Navn fra oppgave 1*/
+        const alder = 17;
+        const elev = true;
+        let tom;
+        console.log(`${navn} er av type `,typeof(navn));
+        console.log(`${elev} er av type `,typeof(elev));
+        console.log(`${tom} er av type `,typeof(tom));
+
+        console.log("\n\n\n\n");
+
+    </script>
+    <p>Se console</p>
+    <style>
+    </style>
+
+    <h1>Oppgave 4</h1>
+    <h2 id="melding">ingen melding enda</h2>
+    <script>
+        console.log("OPPGAVE 4: \n");
+
+
+        const melding = document.querySelector("#melding");
+        console.log(melding.innerHTML);
+
+        console.log("\n\n\n\n");
+    </script>
+
+
+
+    <h1>Oppgave 5</h1>
+    <p>meldingen i oppgave 4 ble endret!</p>
+    <script>
+        console.log("OPPGAVE 5: \n");
+        melding.textContent = "JavaScript was here!";
+        console.log(melding.textContent);
+        console.log("\n\n\n\n");
+    </script>
+
+
+
+    <!--OPPGAVE 6-->
+    <h1>Oppgave 6</h1>
+    <script>
+        console.log("OPPGAVE 6: \n");
+        function visMeldingOpg5(){
+            console.log("knappen ble trykket på, fra oppg 6!");
+        }
+        console.log("\n\n\n\n");
+    </script>
+    <p>se console, dermed klikk!</p>
+    <button onclick="visMeldingOpg5()">klikk meg!</button>
+    
+
+
+    <!--OPPGAVE 7-->
+    <h1>Oppgave 7</h1>
+    <script>
+        console.log("OPPGAVE 7: \n");
+        function visMelding(){
+            console.log("knappen ble trykket!");
+            melding.textContent="Du trykket på knappen!"
+        }
+        console.log("Se nettsiden!\n");
+        console.log("\n\n\n\n");
+    </script>
+    <p>endre meldingen i oppgave 4 ved å klikke!</p>
+    <button onclick="visMelding()">klikk meg!</button>
+    
+</body>
+</html>
