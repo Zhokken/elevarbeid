@@ -114,5 +114,163 @@
     <p>endre meldingen i oppgave 4 ved å klikke!</p>
     <button onclick="visMelding()">klikk meg!</button>
     
+    <h1>Oppgave 8</h1>
+    <input type="text" id="inputNavn" placeholder="navn..">
+    <button onclick="siHei()">submit</button>
+    <br>
+    <p id="outputHei"></p>
+    <script>
+        
+        console.log("OPPGAVE 8: \n");
+
+
+        function siHei(){
+            const navnInput = document.querySelector("#inputNavn").value;
+            const heiMelding = document.querySelector("#outputHei");
+            heiMelding.textContent = `Hei, ${navnInput}!`;
+        }
+
+        //ser bedre ut i consolen
+        console.log("\n\n\n\n");
+    </script>
+
+    <!--OPPGAVE 9-->
+    <h1>Oppgave 9</h1>
+    <script>
+        console.log("OPPGAVE 9: \n");
+
+        function lagHilsen(navn){
+            let text = "Hei " + navn +"!";
+            return text;
+        }
+        const oppg9txt = lagHilsen("Jonny");
+        console.log(oppg9txt)
+        console.log("\n\n\n\n");
+    </script>
+    <p>se consolen</p>
+
+
+    <!--OPPGAVE 10-->
+    <h1>Oppgave 10</h1>
+    <script>
+        //CONSOLE STYLING
+        console.log("OPPGAVE 10: \n");
+
+
+        function lagHilsenIgjen(navn, alder){
+            let text = "Hei " + navn + " du er " + alder + " år"+"!";
+            return text;
+        }
+        const oppg10txt = lagHilsenIgjen("Jonny", 18);
+        console.log(oppg10txt)
+
+        //SER BEDRE UT I CONSOLE:
+        console.log("\n\n\n\n");
+    </script>
+    <p>se consolen</p>
+
+
+    <h1>Oppgave 11</h1>
+    <style>
+        .boks {
+            background-color: aqua;
+            font-size: 1.2em;
+            color: orange;
+        }
+        .boksEndret {
+            background-color: yellow;
+            font-size: 1.4em;
+            color: darkgrey;
+        }
+    </style>
+    <script>
+
+        //CONSOLE STYLING
+        console.log("OPPGAVE 11: \n");
+        console.log("Se nettsiden!")
+
+
+
+        function bytteFarge(){
+            const boks = document.querySelector("#boks");
+            boks.style.backgroundColor = "yellow";
+            boks.style.fontSize = "1.4em";
+            boks.style.color = "darkgrey";
+        }
+
+        //SER BEDRE UT I CONSOLE:
+        console.log("\n\n\n\n");
+    </script>
+    <div class="boks" id="boks">Her er boksen</div>
+    <button onclick="bytteFarge()">bytt farge</button>
+
+    <h1>Oppgave 12</h1>
+    
+    <script>
+
+        //CONSOLE STYLING
+        console.log("OPPGAVE 12: \n");
+        console.log("Se nettsiden!")
+
+
+        let antallKlikk = 0;
+        function økeAntallKlikk(){
+            
+            const teller = document.querySelector("#teller");
+        
+            antallKlikk++;
+            teller.textContent = "du har klikket " + antallKlikk + " ganger.";
+        }
+
+
+        //SER BEDRE UT I CONSOLE:
+        console.log("\n\n\n\n");
+    </script>
+    <button onclick="økeAntallKlikk()">KLIKK</button>
+    <p id="teller"></p>
+
+
+    <h1>Oppgave 13</h1>
+    <script>
+
+        //CONSOLE STYLING
+        console.log("OPPGAVE 13: \n");
+
+
+
+
+         const nyEelev = {
+            navn: "Mathias",
+            alder: 49,
+            klasse: "2ITa",
+            erElev: true,
+            presenter (){
+                return "Jeg heter " + this.navn + " og går i klassen " + this.klasse;
+            }
+        }
+        console.log(typeof(nyEelev));
+        console.log(nyEelev);
+        console.log(nyEelev.navn);
+
+        //SER BEDRE UT I CONSOLE:
+        console.log("\n\n\n\n");
+    </script>
+
+
+
+    <h1>Oppgave 14</h1>
+    <script>
+
+        //CONSOLE STYLING
+        console.log("OPPGAVE 14: \n");
+
+
+        console.log(nyEelev.presenter());
+
+
+
+        //SER BEDRE UT I CONSOLE:
+        console.log("\n\n\n\n");
+    </script>
 </body>
 </html>
