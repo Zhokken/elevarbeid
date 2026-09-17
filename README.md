@@ -1,2 +1,2 @@
-# elevarbeid
-markdown fil, kommer snart
+# Javacript variabler repitisjon
+
