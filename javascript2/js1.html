@@ -113,6 +113,21 @@
     <p>Se console.</p>
     <br>
 
+    <p><span>Del 5</span> - logiske operatorer.</p>
+    <script> 
+        function sjekkBillett(){      
+            const alder5 = document.querySelector("#alder5Input").value; 
+            const harBillett5 = document.querySelector("#billett5Input").checked;
+        
+            if(alder5 >= 16 && harBillett5 == true ){
+                console.log("Du slipper inn!")
+            }
+            else{ console.log("GO HOME!")}
+        }
+    </script>
+    <input type="number" id="alder5Input" placeholder="alder">
+    <input type="checkbox" id="billett5Input"> Har du billettt? <br>
+    <button onclick="sjekkBillett()">Sjekk</button>
 
 
 </body>
