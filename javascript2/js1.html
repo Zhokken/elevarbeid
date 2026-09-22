@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontrollstrukturer JS</title>
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        span {
+            font-size: 1.5em;
+        }
+
+        input,
+        button,
+        p {
+            padding: 5px;
+            margin: 5px;
+        }
+        p{
+            font-size: 1.2em;
+        }
+    </style>
+
+    <p><span>Del 1</span> - sjekk alderen din.</p>
+    <script>
+        function sjekkAlder1() {
+            const inputFelt1 = document.querySelector("#alder1");
+            const restultat = document.querySelector("#resultat1");
+            const alder = inputFelt1.value;
+            if (alder >= 18) {
+                restultat1.innerHTML = "Du er myndig";
+                console.log("Du er myndig");
+            } else {
+                restultat1.innerHTML = "Du er ikke myndig";
+                console.log("Du er ikke myndig");
+            }
+        }
+    </script>
+    <input id="alder1" type="number" placeholder="alder" />
+    <button type="button" onclick="sjekkAlder1()">Submit</button>
+    <p id="restultat1"></p>
+    <br>
+
+    <p><span>Del 2</span> - sjekk tempraturen.</p>
+    <script>
+        function sjekkTemp2() {
+            const inputFelt2 = document.querySelector("#alder2");
+            const restultat = document.querySelector("#resultat2");
+            const temperatur = inputFelt2.value;
+            if (temperatur >= 20) {
+                restultat2.innerHTML = "Det er varmt";
+                console.log("Det er varmt");
+            } else {
+                restultat2.innerHTML = "Det er kaldt";
+                console.log("Det er kaldt");
+            }
+        }
+    </script>
+    <input id="alder2" type="number" placeholder="temperatur" />
+    <button type="button" onclick="sjekkTemp2()">Submit</button>
+    <p id="restultat2"></p>
+    <br>
+
+    <p><span>Del 3</span> - sjekk din karakter.</p>
+    <script>
+        function sjekkKarakter3() {
+            const karakter = document.querySelector("#karakter3").value;
+            if (karakter > 90) {
+                console.log("Du fikk karakter A");
+            } else if (karakter > 80) {
+                console.log("Du fikk karakter B");
+            } else if (karakter > 70) {
+                console.log("Du fikk karakter C");
+            } else if (karakter > 60) {
+                console.log("Du fikk karakter D");
+            } else {
+                console.log("IKKE BESTÅTT! :-(");
+            }
+        }
+    </script>
+    <input type="number" id="karakter3" placeholder="hvor mange poeng?" />
+    <button onclick="sjekkKarakter3()">Sjekk</button>
+    <p>Se console!</p>
+    <br>
+
+    <p><span>Del 4</span> - test operatorer.</p>
+    <script>
+        const alder4 = 17;
+        const grense4 = 18;
+        const poeng4 = "100";
+        const maksPoeng4 = 100;
+        /*Test følgende operatorer | bruk console.log*/
+        console.log(alder4 == grense4);
+        console.log(alder4 != grense4);
+
+        console.log(alder4 > grense4);
+        console.log(alder4 < grense4);
+        
+        console.log(alder4 >= grense4);
+        console.log(alder4 <= grense4);
+
+        console.log(poeng4 == maksPoeng4);
+        console.log(poeng4 === maksPoeng4);
+
+    </script>
+    <p>Se console.</p>
+    <br>
+
+
+
+</body>
+
+</html>
