@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oppgave etter del 5</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: beige;
+        }
+
+        span {
+            font-size: 1.5em;
+        }
+
+        input,
+        button,
+        p {
+            padding: 5px;
+            margin: 5px;
+        }
+        p{
+            font-size: 1.2em;
+        }
+    </style>
+
+
+    
+    <p><span>ETTER Del 5</span> - oppgave etter del 5.</p>
+    <script> 
+        function sjekkAdgang(){      
+            const alder = document.querySelector("#alder").value; 
+            const harForesatt = document.querySelector("#foresatt").checked;
+            const outputP = document.querySelector("#output");
+        
+            if(alder >= 15){
+                console.log("Du slipper inn!")
+                outputP.style.color = "green";
+                outputP.textContent = "Du slipper inn!";
+            }
+            else if(alder <= 14 && alder >= 12 && harForesatt == true){
+                console.log("Du slipper inn!")
+                outputP.style.color = "green";
+                outputP.textContent = "Du slipper inn!";
+            }else{
+                console.log("GO HOME!")
+                outputP.style.color = "red";
+                outputP.textContent = "GO HOME!";
+            }
+        }
+    </script>
+    <input type="number" id="alder" placeholder="alder">
+    <input type="checkbox" id="foresatt"> Er foresatte med? <br>
+    <button onclick="sjekkAdgang()">Sjekk adgang</button>
+    <!--<p>Se console</p>-->
+    <p id="output"></p>
+</body>
+</html>
