@@ -1,135 +1,188 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontrollstrukturer JS</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <style>
-        body {
-            background-color: beige;
-        }
+      body {
+        background-color: beige;
+      }
 
-        span {
-            font-size: 1.5em;
-        }
+      span {
+        font-size: 1.5em;
+      }
 
-        input,
-        button,
-        p {
-            padding: 5px;
-            margin: 5px;
-        }
-        p{
-            font-size: 1.2em;
-        }
+      input,
+      button,
+      select,
+      p {
+        padding: 5px;
+        margin: 5px;
+      }
+      p {
+        font-size: 1.2em;
+      }
     </style>
 
     <p><span>Del 1</span> - sjekk alderen din.</p>
     <script>
-        function sjekkAlder1() {
-            const inputFelt1 = document.querySelector("#alder1");
-            const restultat = document.querySelector("#resultat1");
-            const alder = inputFelt1.value;
-            if (alder >= 18) {
-                restultat1.innerHTML = "Du er myndig";
-                console.log("Du er myndig");
-            } else {
-                restultat1.innerHTML = "Du er ikke myndig";
-                console.log("Du er ikke myndig");
-            }
+      function sjekkAlder1() {
+        const inputFelt1 = document.querySelector("#alder1");
+        const restultat = document.querySelector("#resultat1");
+        const alder = inputFelt1.value;
+        if (alder >= 18) {
+          restultat1.innerHTML = "Du er myndig";
+          console.log("Du er myndig");
+        } else {
+          restultat1.innerHTML = "Du er ikke myndig";
+          console.log("Du er ikke myndig");
         }
+      }
     </script>
     <input id="alder1" type="number" placeholder="alder" />
     <button type="button" onclick="sjekkAlder1()">Submit</button>
     <p id="restultat1"></p>
-    <br>
+    <br />
 
     <p><span>Del 2</span> - sjekk tempraturen.</p>
     <script>
-        function sjekkTemp2() {
-            const inputFelt2 = document.querySelector("#alder2");
-            const restultat = document.querySelector("#resultat2");
-            const temperatur = inputFelt2.value;
-            if (temperatur >= 20) {
-                restultat2.innerHTML = "Det er varmt";
-                console.log("Det er varmt");
-            } else {
-                restultat2.innerHTML = "Det er kaldt";
-                console.log("Det er kaldt");
-            }
+      function sjekkTemp2() {
+        const inputFelt2 = document.querySelector("#alder2");
+        const restultat = document.querySelector("#resultat2");
+        const temperatur = inputFelt2.value;
+        if (temperatur >= 20) {
+          restultat2.innerHTML = "Det er varmt";
+          console.log("Det er varmt");
+        } else {
+          restultat2.innerHTML = "Det er kaldt";
+          console.log("Det er kaldt");
         }
+      }
     </script>
     <input id="alder2" type="number" placeholder="temperatur" />
     <button type="button" onclick="sjekkTemp2()">Submit</button>
     <p id="restultat2"></p>
-    <br>
+    <br />
 
     <p><span>Del 3</span> - sjekk din karakter.</p>
     <script>
-        function sjekkKarakter3() {
-            const karakter = document.querySelector("#karakter3").value;
-            if (karakter > 90) {
-                console.log("Du fikk karakter A");
-            } else if (karakter > 80) {
-                console.log("Du fikk karakter B");
-            } else if (karakter > 70) {
-                console.log("Du fikk karakter C");
-            } else if (karakter > 60) {
-                console.log("Du fikk karakter D");
-            } else {
-                console.log("IKKE BESTÅTT! :-(");
-            }
+      function sjekkKarakter3() {
+        const karakter = document.querySelector("#karakter3").value;
+        if (karakter > 90) {
+          console.log("Du fikk karakter A");
+        } else if (karakter > 80) {
+          console.log("Du fikk karakter B");
+        } else if (karakter > 70) {
+          console.log("Du fikk karakter C");
+        } else if (karakter > 60) {
+          console.log("Du fikk karakter D");
+        } else {
+          console.log("IKKE BESTÅTT! :-(");
         }
+      }
     </script>
     <input type="number" id="karakter3" placeholder="hvor mange poeng?" />
     <button onclick="sjekkKarakter3()">Sjekk</button>
     <p>Se console!</p>
-    <br>
+    <br />
 
     <p><span>Del 4</span> - test operatorer.</p>
     <script>
-        const alder4 = 17;
-        const grense4 = 18;
-        const poeng4 = "100";
-        const maksPoeng4 = 100;
-        /*Test følgende operatorer | bruk console.log*/
-        console.log(alder4 == grense4);
-        console.log(alder4 != grense4);
+      const alder4 = 17;
+      const grense4 = 18;
+      const poeng4 = "100";
+      const maksPoeng4 = 100;
+      /*Test følgende operatorer | bruk console.log*/
+      console.log(alder4 == grense4);
+      console.log(alder4 != grense4);
 
-        console.log(alder4 > grense4);
-        console.log(alder4 < grense4);
-        
-        console.log(alder4 >= grense4);
-        console.log(alder4 <= grense4);
+      console.log(alder4 > grense4);
+      console.log(alder4 < grense4);
 
-        console.log(poeng4 == maksPoeng4);
-        console.log(poeng4 === maksPoeng4);
+      console.log(alder4 >= grense4);
+      console.log(alder4 <= grense4);
 
+      console.log(poeng4 == maksPoeng4);
+      console.log(poeng4 === maksPoeng4);
     </script>
     <p>Se console.</p>
-    <br>
+    <br />
 
     <p><span>Del 5</span> - logiske operatorer.</p>
-    <script> 
-        function sjekkBillett(){      
-            const alder5 = document.querySelector("#alder5Input").value; 
-            const harBillett5 = document.querySelector("#billett5Input").checked;
-        
-            if(alder5 >= 16 && harBillett5 == true ){
-                console.log("Du slipper inn!")
-            }
-            else{ console.log("GO HOME!")}
+    <script>
+      function sjekkBillett() {
+        const alder5 = document.querySelector("#alder5Input").value;
+        const harBillett5 = document.querySelector("#billett5Input").checked;
+
+        if (alder5 >= 16 && harBillett5 == true) {
+          console.log("Du slipper inn!");
+        } else {
+          console.log("GO HOME!");
         }
+      }
     </script>
-    <input type="number" id="alder5Input" placeholder="alder">
-    <input type="checkbox" id="billett5Input"> Har du billettt? <br>
+    <input type="number" id="alder5Input" placeholder="alder" />
+    <input type="checkbox" id="billett5Input" /> Har du billettt? <br />
     <button onclick="sjekkBillett()">Sjekk</button>
 
+    <p><span>Del 6</span> - Logiske operatorer.</p>
+    <script>
+      function sjekkTilgang6() {
+        const elev = document.querySelector("#elev6").checked;
+        const lerar = document.querySelector("#lerar6").checked;
+        const resultat = document.querySelector("#resultat6");
 
-</body>
+        if (elev == true || lerar == true) {
+          resultat.style.color = "green";
+          resultat.textContent = "Du har tilgang!";
+        } else {
+          resultat.style.color = "red";
+          resultat.textContent = "DU har IKKE TILGANG!";
+        }
+      }
+    </script>
+    <input type="checkbox" id="elev6" /> Jeg er elev
+    <input type="checkbox" id="lerar6" /> Jeg er Lærer
+    <button onclick="sjekkTilgang6()">Sjekk tilgang</button>
+    <p id="resultat6"></p>
 
+    <p><span>Del 7</span> - switch setning.</p>
+    <script>
+      function sjekkDag7() {
+        const dag = document.querySelector("#ukeDag7").value;
+        const resultat = document.querySelector("#resultat7");
+        /*resultat.innerHTML = dag;*/
+
+        switch (dag) {
+          case "0":
+            resultat.textContent = "Mandag";
+            break;
+          case "1":
+            resultat.textContent = "Tirsdag";
+            break;
+          case "2":
+            resultat.textContent = "Onsdag";
+            break;
+          case "3":
+            resultat.textContent = "Torsdag";
+            break;
+          case "4":
+            resultat.textContent = "Fredag";
+            break;
+        }
+      }
+    </script>
+    <select name="ukeDag7" id="ukeDag7" onchange="sjekkDag7()">
+      <option value="0">Mandag</option>
+      <option value="1">Tirsdag</option>
+      <option value="2">Onsdag</option>
+      <option value="3">Tordag</option>
+      <option value="4">Fredag</option>
+    </select>
+    <p id="resultat7"></p>
+  </body>
 </html>
