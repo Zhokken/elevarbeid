@@ -5,12 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
+        
       body {
         background-color: beige;
       }
 
       span {
         font-size: 1.5em;
+        color: darkcyan;
       }
 
       input,
@@ -23,15 +25,94 @@
         font-size: 1.2em;
       }
     </style>
-  </head>
-  <body>
-    <p><span>Del 8</span> - løkker.</p>
-    <script>
-      for (let i = 1; i < 11; i++) {
-        console.log(i);
-      }
-    </script>
-    <p>Se console.</p>
-    <br />
-  </body>
+</head>
+    <body>
+        <p><span>Del 8</span> - løkker.</p>
+        <script>
+            for (let i = 0; i < 10; i++) {
+                console.log(i);
+            }
+        </script>
+        <p>Se console.</p>
+        <br>
+
+        <p><span>Del 9</span> - løkker.</p>
+        <p>if setninger ble brukt her:</p>
+        <p id="resultat9"></p>
+        <br>
+
+        <p>her ble substring brukt:</p>
+        <p id="resultat9_1"></p>
+        <br>
+        
+        <p>her ble håkons metode brukt:</p>
+        <p id="resultat9_2"></p>
+        <script>
+            const res9 = document.querySelector("#resultat9");
+            let teller9 = "";
+            for (let i = 10; i >= 1; i--) {
+                if (i > 1){
+                    teller9 = teller9 + i + ", ";
+                }else if(i == 1){
+                    teller9 = teller9 + i;
+                }
+                res9.innerHTML = teller9;
+            }
+
+            /*Substring metode | enklest*/
+            const res9_1 = document.querySelector("#resultat9_1");
+            let teller9_1 = "";
+            for (let i = 10; i >= 1; i--) {
+                teller9_1 = teller9_1 + i + ", ";
+            }
+            teller9_1 = teller9_1.substring(0, teller9_1.length-2);
+            res9_1.innerHTML = teller9_1;
+            
+
+            /*Håkons METODE*/
+            const res9_2 = document.querySelector("#resultat9_2");
+            let teller9_2 = "";
+            for (let i = 10; i >= 1; i--) {
+                teller9_2 += i;
+                if (i > 1) teller9_2 += ", ";
+                res9_2.innerHTML = teller9_2;
+            }
+        </script>
+        <br>
+
+        <p><span>Del 9.3</span> - arrays.</p>
+        <p>description:</p>
+        <p id="resultatID"></p>
+        <script>
+            console.log("\n\n")
+            console.log("Del 9.3")
+            const tall = [8, 3, 12, 1, 5];
+            console.log(tall)
+            for(let i = 0; i < tall.length; i ++){
+                console.log(tall[i]);
+            }
+
+            //vodoo shit right here->
+            let biggest = 0;
+            for (let i = 0; i < tall.length; i++){
+                if (tall[i] > biggest) biggest = tall[i];
+            }
+            console.log(biggest);
+        </script>
+
+
+
+
+
+
+        <p><span>Del 9.7</span> - arrays.</p>
+        <p>sorterings funksjon:</p>
+        <script>
+            //BUBBLE SORT??
+            
+        </script>
+
+
+    
+    </body>
 </html>
