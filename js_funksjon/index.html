@@ -17,7 +17,7 @@
       button,
       p {
         padding: 5px;
-        margin: 5px;
+        margin-top: 0px;
       }
       p {
         font-size: 1.2em;
@@ -25,6 +25,11 @@
     </style>
 </head>
 <body>
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("1 - din første funksjon")</script>
+    <!--|||||||||||||||||||||||-->
+    
+    
     <h1>1 - din første funksjon</h1>
     <script>
         function siHei(){
@@ -33,9 +38,13 @@
     </script>
     <p>Se console.</p>
 
-    <!--|||||||||||||||||||||||-->
-    <!--|||||||||||||||||||||||-->
 
+
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n2 - kjør funksjonen")</script>
+    <!--|||||||||||||||||||||||-->
+    
+    
     <h1>2 - kjør funksjonen</h1>
     <script>
         function siHeiVerden(){
@@ -47,19 +56,94 @@
     </script>
     <p>Se console.</p>
 
-    <!--|||||||||||||||||||||||-->
-    <!--|||||||||||||||||||||||-->
+    
 
-    <h1>2 - kjør funksjonen</h1>
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n3 - funksjon med parameter")</script>
+    <!--|||||||||||||||||||||||-->
+    
+    
+    <h1>3 - funksjon med parameter</h1>
     <script>
-        function siHeiVerden(){
-            console.log("Hei verden!")
-        } 
-        for(i = 0; i < 3; i++){
-            siHeiVerden();
+        function siHeiNavn(a){ /*lmao bra navn, ingen vet hva det er typeshi*/
+            console.log("Hei " + a +"!");
         }
+        let navn = "Ola"
+        siHeiNavn(navn);
+        
     </script>
     <p>Se console.</p>
 
+    
+
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n4 - flere parametere")</script>
+    <!--|||||||||||||||||||||||-->
+
+
+    <h1>4 - flere parametere</h1>
+    <script>
+        function presenter4(a, b){ 
+            console.log(a + ", " + b + " år");
+        }
+        let navn4 = "Karen";
+        let alder4 = 3;
+        presenter4(navn4, alder4);
+    </script>
+    <p>Se console.</p>
+
+
+
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n5 - returnere tekst")</script>
+    <!--|||||||||||||||||||||||-->
+
+
+    <h1>5 - returnere tekst</h1>
+    <script>
+        function lagHilsen5(navn){
+            return "Hei " + navn +"!";
+        }
+        let navn5 = "Per";
+        let melding5 = lagHilsen5(navn5);
+        console.log(melding5)
+    </script>
+    <p>Se console.</p>
+
+
+
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n6 - gjør teksten større")</script>
+    <!--|||||||||||||||||||||||-->
+
+
+    <h1>6 - gjør teksten større</h1>
+    <script>
+        function rop6(tekst){
+            return tekst.toUpperCase();
+        }
+        let tekst6 = "hei";
+        let melding6 = rop6(tekst6);
+        console.log(melding6)
+    </script>
+    <p>Se console.</p>
+
+
+
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n7 - gjør teksten mindre")</script>
+    <!--|||||||||||||||||||||||-->
+
+
+    <h1>7 - gjør teksten mindre</h1>
+    <script>
+        function hvisk7(tekst){
+            return tekst.toLowerCase();
+        }
+        let tekst7 = "HEI";
+        let melding7 = hvisk7(tekst6);
+        console.log(melding7)
+    </script>
+    <p>Se console.</p>
 </body>
 </html>
