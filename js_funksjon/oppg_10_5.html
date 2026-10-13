@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oppgave 10.5</title>
+    <style>
+      body {
+        background-color: beige;
+      }
+
+      h1 {
+        color: darkcyan;
+      }
+
+      input,
+      button,
+      p {
+        padding: 5px;
+        margin-top: 0px;
+      }
+      p {
+        font-size: 1.2em;
+      }
+    </style>
+</head>
+<body>
+    
+
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n10.5 - lag brukernavn")</script>
+    <!--|||||||||||||||||||||||-->
+
+    <h1>10.5 - lag brukernavn</h1>
+    <script>
+        function lagBrukernavn(fornavn, etternavn){
+            return fornavn[0].toLowerCase() + fornavn[1].toLowerCase() + etternavn[0].toLowerCase() + etternavn[1].toLowerCase();
+        }
+        let fornavn101 = "Lisa";
+        let etternavn101 = "Presley";
+        console.log(lagBrukernavn(fornavn101, etternavn101));
+    </script>
+    <p>Se console.</p>
+</body>
+</html>
