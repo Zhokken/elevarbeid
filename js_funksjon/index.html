@@ -190,12 +190,12 @@
 
     <h1>10 - lag brukernavn</h1>
     <script>
-        function lagBrukernavn(fornavn, etternavn){
+        function lagBrukernavn10(fornavn, etternavn){
             return fornavn.toLowerCase() + "." + etternavn.toLowerCase();
         }
         let fornavn10 = "Lisa";
         let etternavn10 = "Presley";
-        console.log(lagBrukernavn(fornavn10, etternavn10));
+        console.log(lagBrukernavn10(fornavn10, etternavn10));
     </script>
     <p>Se console.</p>
 
@@ -208,18 +208,36 @@
 
     <h1>11 - Template literals</h1>
     <script>
-        function elevInfo(elev, klasse){
+        function elevInfo11(elev, klasse){
             console.log(`${elev} går i klasse ${klasse}`);
         }
-        let elev = "Lisa";
+        let elev = "Danylo";
         let klasse = "2ITa";
-        console.log(elevInfo(elev, klasse));
+        console.log(elevInfo11(elev, klasse));
     </script>
     <p>Se console.</p>
 
 
 
-    
+    <!--|||||||||||||||||||||||-->
+    <script>console.log("\n\n10 - lag brukernavn")</script>
+    <!--|||||||||||||||||||||||-->
+
+
+    <h1>12 - funksjon koblet til HTML</h1>
+    <script>
+        function siHei12(){
+            const navn = document.querySelector("#navnInput12");
+            const result = document.querySelector("#resultat12");
+
+            result.innerHTML = `Hei ${navn.value}!`;
+        }
+        </script>
+        <input type="text" id="navnInput12">
+        <button onclick="siHei12()">si hei</button>
+
+        <p id="resultat12"></p>
+    <p>Se console.</p>   
 
 
 </body>
